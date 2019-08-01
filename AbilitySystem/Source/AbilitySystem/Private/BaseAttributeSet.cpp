@@ -8,7 +8,7 @@
 #include "AbilitySystemComponent.h"
 #include "BaseCharacter.h"
 UBaseAttributeSet::UBaseAttributeSet() :Health(200.f),MaxHealth(200.f)
-,Mana(150.f),MaxMana(150.f),Strength(250.f),MaxStrength(250.f)
+,Mana(150.f),MaxMana(150.f),Strength(250.f),MaxStrength(250.f),AttackDamage(20.f),Armor(5.f)
 {
 	//构造函数用于初始化Health
 }

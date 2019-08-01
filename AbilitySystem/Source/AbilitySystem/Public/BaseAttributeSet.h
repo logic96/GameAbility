@@ -35,6 +35,14 @@ public:
 		FGameplayAttributeData Strength;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = AttributeSet)
 		FGameplayAttributeData MaxStrength;
+	//攻击力
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = AttributeSet)
+		FGameplayAttributeData AttackDamage;
+
+	//护甲
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = AttributeSet)
+		FGameplayAttributeData Armor;
+
 	virtual void PostGameplayEffectExecute(const struct FGameplayEffectModCallbackData& Data)override;
 	//这里的delegate名称需要优化
 	FOnHealthChangeDelegate OnHealthChange;
