@@ -70,6 +70,9 @@ public:
 		FGameplayTag FullHealthTag;
 	UFUNCTION(BlueprintCallable)
 		void HitStun(float StunDuration);
+
+	UFUNCTION(BlueprintCallable)
+		void ApplyGESpecHandleToTargetDataSpecHandle(const FGameplayEffectSpecHandle& GESpecHandle,const FGameplayAbilityTargetDataHandle & TargetDataHandle);
 protected:
 	bool bIsDeath;
 

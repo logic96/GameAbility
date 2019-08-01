@@ -135,6 +135,14 @@ void ABaseCharacter::HitStun(float StunDuration)
 	GetWorldTimerManager().SetTimer(StunTimerHandle, this, &ABaseCharacter::EnableInputControl, StunDuration,false);
 }
 
+void ABaseCharacter::ApplyGESpecHandleToTargetDataSpecHandle(const FGameplayEffectSpecHandle& GESpecHandle, const FGameplayAbilityTargetDataHandle& TargetDataHandle)
+{
+	for (TSharedPtr<FGameplayAbilityTargetData>Data : TargetDataHandle.Data)
+	{
+		Data->ApplyGameplayEffectSpec(*GESpecHandle.Data.Get());
+	}
+}
+
 void ABaseCharacter::AutoDetermineTeamIDByControllerType()
 {
 	if (GetController() && GetController()->IsPlayerController()) {
